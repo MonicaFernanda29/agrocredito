@@ -1,1 +1,26 @@
-<p>login works!</p>
+<div class="login-container">
+    <p-card class="login-card">
+        <h2>Iniciar Sesión</h2>
+        <form>
+            <div class="p-field">
+                
+                <input pInputText type="email" id="email" placeholder="Ingresar tu correo"/>
+            </div>
+
+            <div class="p-field">
+                
+                <input pInputText type="password" id="password" placeholder="Ingresar tu contraseña"/>
+            </div>
+            <p class="forgot-password">
+                <a routerLink="/forgot-password">¿Olvidaste tu contraseña?</a>
+              </p>
+
+            <p-button label="Ingresar" icon="pi pi-sign-in" class="p-mt-2"></p-button>
+
+            <p class="register-text">
+                ¿No tienes cuenta? <a routerLink="/register">Registrate</a>
+
+            </p>
+        </form>
+    </p-card>
+</div>

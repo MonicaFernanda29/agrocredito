@@ -1,0 +1,63 @@
+
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #000000, #000000);
+  }
+  
+  .register-card {
+    width: 400px;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: rgb(29, 28, 28);
+    text-align: center;
+   
+  }
+  
+  .p-field {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  
+  .p-field input,
+  .p-dropdown {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #020202;
+  }
+  
+  .p-button {
+    width: 100%;
+    background: #3b82f6;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .p-button:hover {
+    background: #2563eb;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+  
+  .login-text {
+    margin-top: 1rem;
+  }
+  
+  .login-text a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
