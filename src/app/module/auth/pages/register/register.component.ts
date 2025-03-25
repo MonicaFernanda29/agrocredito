@@ -1,40 +1,69 @@
+import { InputTextModule } from 'primeng/inputtext';
+import { CardModule } from 'primeng/card';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
-import { CardModule } from 'primeng/card';
-import { DropdownModule } from 'primeng/dropdown';
-import { InputTextModule } from 'primeng/inputtext';
+import { FormsModule } from '@angular/forms';
+import { PasswordModule } from 'primeng/password';
+import { FloatLabelModule } from 'primeng/floatlabel';
+import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
+import { InputGroupModule } from 'primeng/inputgroup';
+import { CascadeSelectModule } from 'primeng/cascadeselect';
+import { DatePickerModule } from 'primeng/datepicker';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+import { AuthService } from '../../../../core/services/auth.service';
+import { RegisterRequest } from '../../../../core/model/ request/register-request.model';
+
+
 
 @Component({
   selector: 'app-register',
-  imports: [CommonModule, FormsModule ,CardModule, InputTextModule, ButtonModule, DropdownModule],
+  imports: [
+    CardModule, 
+    InputGroupAddonModule, 
+    DatePickerModule, 
+    InputGroupModule, 
+    PasswordModule, 
+    FormsModule, 
+    CardModule, 
+    InputTextModule, 
+    FloatLabelModule, 
+    ButtonModule, 
+    CommonModule, 
+    CascadeSelectModule,
+    AnimateOnScrollModule ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
-  user = {
-    fullName: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    phone: '',
-    address: '',
-    userType: ''
-  };
 
-  userTypes = [
-    { label: 'Agricultor', value: 'agricultor' },
-    { label: 'Proveedor', value: 'proveedor' }
-  ];
+  constructor(readonly authService:AuthService) { }
 
-  onSubmit() {
-    if (this.user.password !== this.user.confirmPassword) {
-      alert('Las contraseñas no coinciden');
-      return;
-    }
-    alert('Registro exitoso');
-    console.log(this.user);
+
+  /*selectedDate?: Date ;
+  nombre : string = "";
+  apellido: string = "";
+  celular: string = "" ;
+  ciudad: string = "" ;
+  direccion: string = "";
+  correo: string = "";
+  password: string = "";*/
+  registerData: RegisterRequest = {
+    name: "" ,
+    email: "",
+    password: "" 
+  }
+  
+  register(){
+    this.authService.registerUser(this.registerData).subscribe({
+      next: (response) => {
+        console.log(this.registerData);
+        alert(`Registrar usuario registrado con exito ${response.accessToken}`);
+      },
+      error: (error) => {
+        alert(`Error al registrar el usuario ${error}`);
+      }
+    })
   }
 
 }

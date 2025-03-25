@@ -1,0 +1,71 @@
+/* Barra superior */
+.top-bar {
+    background-color: #418844; /* Verde oscuro */
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  /* Contenedor del Menubar */
+  .nav-container {
+    background-color: #376639;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+  }
+  
+  /* Logo del menú */
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  /* Contenedor de acciones */
+  .menu-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Buscador */
+  .search-container {
+    display: flex;
+    align-items: center;
+    padding: 10px 431px;
+    border-radius: 20px;
+  }
+  
+  .search-container input {
+    border: none;
+    outline: none;
+    padding: 15px;
+    width: 400px;
+  }
+  
+  .search-btn {
+    background-color: transparent;
+    color: #08b80e;
+  }
+  
+  /* Botones */
+  .login-btn {
+    color: black;
+  }
+  
+  .register-btn {
+    color: black;
+  }
+  
+  .cart-btn {
+    position: relative;
+    color: black;
+  }
+  
+  /* Asegurar que el badge (carrito) se vea bien */
+  .cart-btn .p-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+  }
+  
