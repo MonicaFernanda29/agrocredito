@@ -1,1 +1,36 @@
-<p>login works!</p>
+<div class="card-container">
+    <p-card class="p-card">
+        <ng-template #header></ng-template>
+        <ng-template #title> Iniciar sesión </ng-template>
+        <br>
+        <ng-template #body> 
+            
+        </ng-template>
+        <p-inputgroup>
+            <p-floatlabel variant="on">
+              <input pInputText id="correo" [(ngModel)]="email" />
+              <label for="correo">Correo</label>
+            </p-floatlabel>
+            <p-inputgroup-addon>
+              <i class="pi pi-envelope"></i>
+            </p-inputgroup-addon>
+        </p-inputgroup>
+    
+        <br>
+
+        <p-floatlabel variant="on">
+            <p-password [(ngModel)]="password" inputId="on_label" [toggleMask]="true" />
+            <label for="on_label">Contraseña</label>
+        </p-floatlabel>
+
+        <br>
+
+        <ng-template #footer>
+            <div class="w-full flex justify-content-center">
+                <p-button label="Entrar" class="custom-button w-full" />
+            </div>
+        </ng-template>        
+    </p-card>
+    
+</div>
+

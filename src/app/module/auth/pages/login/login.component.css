@@ -1,0 +1,24 @@
+.card-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+    padding: 20rem;
+}
+
+.p-card {
+    height: 100%; 
+    padding: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+

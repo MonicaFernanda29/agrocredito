@@ -1,0 +1,12 @@
+.card-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+    padding: 10rem;
+}
+
+.p-card {
+    height: 100%; 
+    padding: 5rem;
+}

@@ -1,1 +1,102 @@
-<p>register works!</p>
+<div class="card-container">
+  <p-card class="p-card">
+    <ng-template #header></ng-template>
+    <ng-template #title> Crear Cuenta </ng-template>
+    <br>
+    <ng-template #body> 
+
+    </ng-template>
+      <p-inputgroup>
+        <p-floatlabel variant="on">
+          <input pInputText id="nombre" [(ngModel)]="registerData.name" />
+          <label for="nombre">Nombre</label>
+        </p-floatlabel>
+        <p-inputgroup-addon>
+          <i class="pi pi-user"></i>
+        </p-inputgroup-addon>
+      </p-inputgroup>
+        
+      <br>
+
+      <p-inputgroup>
+        <p-floatlabel variant="on">
+          <input pInputText id="apellido"  />
+          <label for="apellido">Apellido</label>
+        </p-floatlabel>
+        <p-inputgroup-addon>
+          <i class="pi pi-user"></i>
+        </p-inputgroup-addon>
+      </p-inputgroup>
+        
+      <br>
+        
+      <p-inputgroup>
+        <p-floatlabel variant="on">
+          <input pInputText id="" />
+          <label for="celular">Celular</label>
+        </p-floatlabel>
+        <p-inputgroup-addon>
+          <i class="pi pi-phone"></i>
+        </p-inputgroup-addon>
+        </p-inputgroup>
+
+      <br>
+
+      <p-inputgroup>
+        <p-floatlabel variant="on">
+          <input pInputText id="ciudad"  />
+          <label for="ciudad">Ciudad</label>
+        </p-floatlabel>
+        <p-inputgroup-addon>
+          <i class="pi pi-map"></i>
+        </p-inputgroup-addon>
+      </p-inputgroup>
+
+        <br>
+
+      <p-inputgroup>
+        <p-floatlabel variant="on">
+          <input pInputText id="direccion" />
+          <label for="direccion">Direccion</label>
+        </p-floatlabel>
+        <p-inputgroup-addon>
+          <i class="pi pi-map-marker"></i>
+        </p-inputgroup-addon>
+      </p-inputgroup>
+
+      <br>
+
+      <p-floatlabel variant="on">
+        <p-datepicker [showIcon]="true" inputId="buttondisplay" [showOnFocus]="false" />
+        <label for="selectedDate">Fecha Nacimiento</label>
+      </p-floatlabel>
+
+      <br>
+
+      <p-inputgroup>
+        <p-floatlabel variant="on">
+          <input pInputText id="correo" [(ngModel)]="registerData.email" />
+          <label for="correo">Correo</label>
+        </p-floatlabel>
+        <p-inputgroup-addon>
+          <i class="pi pi-envelope"></i>
+        </p-inputgroup-addon>
+      </p-inputgroup>
+
+      <br>
+
+      <p-floatlabel variant="on">
+        <p-password [(ngModel)]="registerData.password" inputId="password" [toggleMask]="true"/>
+        <label for="password">Contraseña</label>
+      </p-floatlabel> 
+      
+
+      <br>
+
+      <ng-template #footer>
+        <p-button label="Registrar" icon="pi pi-check" (onClick)="register()"  iconPos="right" />      
+      </ng-template>
+    
+  </p-card>
+</div>
+

@@ -1,0 +1,23 @@
+<div class="top-bar">
+    <span class="title">🌱 AgroCrédito</span>
+</div>
+  
+<div class="nav-container">
+    <p-menubar [model]="items">
+       
+       <ng-template pTemplate="end">
+            <div class="menu-actions">
+                <div class="search-container">
+                    <input type="text" pInputText placeholder="Busca tus favoritos" />
+                    <button pButton icon="pi pi-search" class="search-btn"></button>
+                </div>
+                <button pButton label="Inicia Sesión" icon="pi pi-user" class="login-btn"></button>
+                <button pButton label="Registrar" class="register-btn"></button>
+                <button pButton icon="pi pi-shopping-cart" class="cart-btn">
+                    <span pBadge value="0"></span>
+                </button>
+            </div>
+        </ng-template>
+    </p-menubar>
+</div>
+  
